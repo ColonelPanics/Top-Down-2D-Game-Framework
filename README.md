@@ -20,8 +20,9 @@ Currently, this is just a brain dump of all the features/things I want to have w
 
 ### Assets
 
-Character - "Sharm's Tiny 16 Character Sprites - Expanded" by Sharm, withthelove and Evert (https://opengameart.org/content/tiny-16-expanded-character-sprites)
-World Assets - "Roguelike pack" by Kenney Vleugels for Kenney (www.kenney.nl) 
+Character: "Sharm's Tiny 16 Character Sprites - Expanded" by Sharm, withthelove and Evert (https://opengameart.org/content/tiny-16-expanded-character-sprites)
+
+World Assets: "Roguelike pack" by Kenney Vleugels for Kenney (www.kenney.nl) 
 
 ### Tutorials/Assistance
 

@@ -8,6 +8,7 @@ Currently, this is just a brain dump of all the features/things I want to have w
 
 - [x] Full Movement
 - [x] Collision System
+- [ ] Camera Movement (follow player)
 - [ ] Scene Transitioning (doors to buildings, etc)
 - [ ] NPCs/Conversation
 - [ ] Inventory System (not looking forward to this, gonna be a biggie)

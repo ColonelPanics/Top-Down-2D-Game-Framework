@@ -7,6 +7,7 @@ public class SceneTransition : MonoBehaviour
 {
     public string gotoScene;
     public BoxCollider2D entrance;
+    public Vector3 spawnPosition;
 
     private GameObject player;
     private bool inRange;
@@ -35,7 +36,6 @@ public class SceneTransition : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Player can enter " + gotoScene);
             inRange = true;
         }
     }
@@ -64,6 +64,7 @@ public class SceneTransition : MonoBehaviour
         }
 
         // Move player to new scene
+        player.transform.position = spawnPosition;
         SceneManager.MoveGameObjectToScene(player, SceneManager.GetSceneByName(gotoScene));
 
         // Unload previous scene

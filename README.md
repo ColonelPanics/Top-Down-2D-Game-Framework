@@ -22,6 +22,8 @@ Currently, this is just a brain dump of all the features/things I want to have w
 ## Thoughts/Things to Change
 
 - The camera movement currently uses the bounds of a large Box Collider on the world, this feels clunky and leads to phantom collisions as anything inside the box is technically colliding with it. Change this to something else, perhaps intelligently working out the bounds of the sprites on the edge layer?
+- Instead of manually setting the position to move players to for building/scene transitions, instead store some sort of global variable that has the "last used" door/movement location. This objects co-ordinates can then be used for spawning the player back to the original point.
+- Due to the starting scene having a player in it, there's a duplication glitch when returning to the original map. This can be addressed by (after adding some sort of global controller above) having some check for an existing player and spawning in if not present (this should spawn a player on first load of the game and then never again as we simply move the game object around).
 
 ## Credit
 

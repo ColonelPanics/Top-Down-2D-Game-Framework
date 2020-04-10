@@ -2,6 +2,8 @@
 
 This repository contains progress on creating a framework for a top down 2D game.
 
+![](preview/20200410.gif)
+
 ## Features
 
 Currently, this is just a brain dump of all the features/things I want to have working in here before actually trying to develop something with substance.

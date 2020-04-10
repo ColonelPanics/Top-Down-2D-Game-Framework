@@ -7,12 +7,15 @@ public class BasicMovement : MonoBehaviour
     public float speed = 1.0f;
 
     private Animator am;
+    private Rigidbody2D rb;
 
+    private Vector3 movement;
 
     // Start is called before the first frame update
     void Start()
     {
         am = this.GetComponent<Animator>();
+        rb = this.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -22,10 +25,7 @@ public class BasicMovement : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        Vector3 movement = new Vector3(horizontal, vertical, 0.0f);
-
-        // Move character
-        transform.position = transform.position + movement * speed * Time.deltaTime;
+        movement = new Vector3(horizontal, vertical, 0.0f);
 
         // Constrain float values for use with animation
         float hf = horizontal > 0.01f ? horizontal : horizontal < -0.01f ? 1 : 0;
@@ -45,5 +45,12 @@ public class BasicMovement : MonoBehaviour
         am.SetFloat("vertical", vertical);
         am.SetFloat("speed", vf);
         am.SetFloat("magnitude", movement.magnitude);
+    }
+
+    // End of each update loop, proper place to move
+    void FixedUpdate()
+    {
+        // Move character
+        rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
     }
 }

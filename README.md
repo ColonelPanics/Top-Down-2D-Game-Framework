@@ -19,6 +19,10 @@ Currently, this is just a brain dump of all the features/things I want to have w
 - [ ] Save States
 - [ ] Anything Else I Bloody Well Feel Like Adding
 
+## Thoughts/Things to Change
+
+- The camera movement currently uses the bounds of a large Box Collider on the world, this feels clunky and leads to phantom collisions as anything inside the box is technically colliding with it. Change this to something else, perhaps intelligently working out the bounds of the sprites on the edge layer?
+
 ## Credit
 
 ### Assets

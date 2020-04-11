@@ -11,7 +11,7 @@ Currently, this is just a brain dump of all the features/things I want to have w
 - [x] Full Movement
 - [x] Collision System
 - [x] Camera Movement (follow player)
-- [~] Transitioning (doors to buildings, movement to new parts of map)
+- [ ] Transitioning (doors to buildings, movement to new parts of map)
     - [x] Scene Transitioning 
     - [ ] Local Transitioning (teleporting to other parts of the scene, saves small buildings needing to be in separate scenes)
 - [ ] NPCs/Conversation

@@ -192,9 +192,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1030287779
+  m_SortingLayer: -1
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1528,6 +1528,8 @@ GameObject:
   - component: {fileID: 1608897834}
   - component: {fileID: 1608897836}
   - component: {fileID: 1608897835}
+  - component: {fileID: 1608897838}
+  - component: {fileID: 1608897837}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -2375,6 +2377,47 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1608897837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608897833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef5bf2683aa44742a46dc739b13263d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gotoScene: SimpleMap1
+  entrance: {fileID: 2057191447}
+  spawnPosition: {x: 3.8, y: 0.7, z: 0}
+--- !u!61 &1608897838
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608897833}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -2.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2057191443
 GameObject:
   m_ObjectHideFlags: 0
@@ -2386,10 +2429,9 @@ GameObject:
   - component: {fileID: 2057191445}
   - component: {fileID: 2057191444}
   - component: {fileID: 2057191447}
-  - component: {fileID: 2057191446}
   m_Layer: 0
   m_Name: Tent
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2422,21 +2464,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2057191446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057191443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aef5bf2683aa44742a46dc739b13263d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gotoScene: SimpleMap1
-  entrance: {fileID: 2057191447}
-  spawnPosition: {x: 3.8, y: 0.7, z: 0}
 --- !u!61 &2057191447
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2450,7 +2477,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -2.5}
+  m_Offset: {x: 0, y: 0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2461,5 +2488,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 1}
+  m_Size: {x: 10, y: 11}
   m_EdgeRadius: 0

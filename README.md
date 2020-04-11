@@ -35,9 +35,13 @@ Note: These things could be bugs or issues that are tracked via GitHub but it's 
 
 ### Assets
 
-Character: ["Sharm's Tiny 16 Character Sprites - Expanded" by Sharm, withthelove and Evert](https://opengameart.org/content/tiny-16-expanded-character-sprites)
+Character:
+- ["Sharm's Tiny 16 Character Sprites - Expanded" by Sharm, withthelove and Evert](https://opengameart.org/content/tiny-16-expanded-character-sprites)
 
-World Assets: ["Roguelike pack" by Kenney Vleugels for Kenney](https://www.kenney.nl/assets/roguelike-rpg-pack) 
+World Assets:
+- ["Roguelike pack" by Kenney Vleugels for Kenney.nl](https://www.kenney.nl/assets/roguelike-rpg-pack) 
+- ["Roguelike Indoors" by Kenney Vleugels for Kenney.nl](https://kenney.nl/assets/roguelike-indoors)
+- ["Roguelike Cave" bt Kennel Vleugels for Kenney.nl](https://kenney.nl/assets/roguelike-caves-dungeons)
 
 ### Tutorials/Assistance
 

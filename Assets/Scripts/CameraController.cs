@@ -18,11 +18,7 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Set box colliders
-        xMin = mapBounds.bounds.min.x;
-        xMax = mapBounds.bounds.max.x;
-        yMin = mapBounds.bounds.min.y;
-        yMax = mapBounds.bounds.max.y;
+        UpdateMapBounds();
 
         // Camera info
         mainCam = this.GetComponent<Camera>();
@@ -37,5 +33,15 @@ public class CameraController : MonoBehaviour
         camY = Mathf.Clamp(focus.position.y, yMin + camVertExtent, yMax - camVertExtent);
 
         this.transform.position = new Vector3(camX, camY, -10);
+    }
+
+    // Update map bounds
+    public void UpdateMapBounds()
+    {
+        // Set box colliders
+        xMin = mapBounds.bounds.min.x;
+        xMax = mapBounds.bounds.max.x;
+        yMin = mapBounds.bounds.min.y;
+        yMax = mapBounds.bounds.max.y;
     }
 }

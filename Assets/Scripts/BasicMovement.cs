@@ -10,12 +10,15 @@ public class BasicMovement : MonoBehaviour
     private Rigidbody2D rb;
 
     private Vector3 movement;
+    private Camera mainCam;
 
     // Start is called before the first frame update
     void Start()
     {
         am = this.GetComponent<Animator>();
         rb = this.GetComponent<Rigidbody2D>();
+
+        mainCam = this.GetComponentInChildren<Camera>();
     }
 
     // Update is called once per frame
@@ -52,5 +55,18 @@ public class BasicMovement : MonoBehaviour
     {
         // Move character
         rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
+    }
+
+    // Set camera bounds based on which "map" collider is being hit
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Map"))
+        {
+            Debug.Log("Setting mapBounds to " + collision);
+            var cameraController = mainCam.GetComponent<CameraController>();
+            var newBounds = collision.GetComponent<BoxCollider2D>();
+            cameraController.mapBounds = newBounds;
+            cameraController.UpdateMapBounds();
+        }
     }
 }

@@ -15,7 +15,6 @@ public class SceneTransition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
         inRange = false;
     }
 
@@ -26,6 +25,7 @@ public class SceneTransition : MonoBehaviour
         {
             if (Input.GetButtonDown("Action"))
             {
+                player = GameObject.FindWithTag("Player");
                 StartCoroutine(LoadScene());
             }
         }

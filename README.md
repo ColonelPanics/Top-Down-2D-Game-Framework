@@ -20,12 +20,16 @@ Currently, this is just a brain dump of all the features/things I want to have w
 - [ ] Combat System
 - [ ] Menu System
 - [ ] Save States
+- [ ] Light System
+    - [ ] Day/Night Cycle
+    - [ ] Local Lighting (torches, etc)
 - [ ] Anything Else I Bloody Well Feel Like Adding
 
 ## Thoughts/Things to Change
 
-Note: These things could be bugs or issues that are tracked via GitHub but it's quicker and easier to manage them through here for now. Things will be deleted when no longer relevant/recent.
+_Note: These things could be bugs or issues that are tracked via GitHub but it's quicker and easier to manage them through here for now. Things will be deleted when no longer relevant/recent._
 
+- The decorations layer of tilemaps does not interact properly with the layering (as this is determined from y axis location, which is shared for the tilemap). Find a way of fixing the depth with tilemaps or just concede that decorations that require proper depth (like torches) will need to be separate prefabs (makes sense as torches will most likely have some independent lighting functionality going forwards)
 - ~The camera movement currently uses the bounds of a large Box Collider on the world, this feels clunky and leads to phantom collisions as anything inside the box is technically colliding with it. Change this to something else, perhaps intelligently working out the bounds of the sprites on the edge layer?~
     - This has been addressed by utilising the collision with the map bounds collider to intelligently set which bounds the player is currently within. Allowing the player object to move between scenes and spaces whilst maintaining proper camera tracking functionality.
 - ~Instead of manually setting the position to move players to for building/scene transitions, instead store some sort of global variable that has the "last used" door/movement location. This objects co-ordinates can then be used for spawning the player back to the original point.~

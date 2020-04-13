@@ -49,6 +49,9 @@ World Assets:
 - ["Roguelike Indoors" by Kenney Vleugels for Kenney.nl](https://kenney.nl/assets/roguelike-indoors)
 - ["Roguelike Cave" bt Kennel Vleugels for Kenney.nl](https://kenney.nl/assets/roguelike-caves-dungeons)
 
+Fonts:
+- ["Retro Gaming" by Daymarius](https://www.dafont.com/retro-gaming.font)
+
 ### Tutorials/Assistance
 
 This wouldn't have been possible for me to learn without the help of the incredible tutorial series by CouchFerret, [available here](https://www.youtube.com/playlist?list=PLM83Z6G5iM3k48356VU6e-oXWl_uwwq4F).

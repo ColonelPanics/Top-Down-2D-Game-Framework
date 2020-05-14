@@ -3,50 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneTransition : MonoBehaviour
+public class SceneTransition : CollisionBase
 {
     public string gotoScene;
     public BoxCollider2D entrance;
     public Vector3 spawnPosition;
 
     private GameObject player;
-    private bool inRange;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        inRange = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(inRange)
-        {
-            if (Input.GetButtonDown("Action"))
-            {
-                player = GameObject.FindWithTag("Player");
-                StartCoroutine(LoadScene());
-            }
-        }
-    }
-
-    // Set inRange
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            inRange = true;
-        }
-    }
-
-    // Set Out of Range
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            inRange = false;
-        }
+    public override void DoThing() {
+        player = GameObject.FindWithTag("Player");
+        StartCoroutine(LoadScene());
     }
 
     // Load Scene
